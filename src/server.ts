@@ -19,8 +19,16 @@ const app = express();
 app.get("*/test", (request, response) => {
     // Request => Entrando
     // Response => Saindo
-    return response.send("Olá NLW")
+    return response.send("Olá NLW");
 });
+
+app.post("*/test-post", (request, response) => {
+    return response.send("Olá NLW método Post");
+});
+/**
+ * o browser só consegue acessar requisições GET. Ele não consegue acessar requisições POST.
+ */
+
 
 // http://localhost:3000 - porta que vai estar o projeto
 app.listen(3000,() => console.log("Server is running at 3000"));
