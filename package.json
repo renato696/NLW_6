@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/renato696/NLW_6.git",
   "author": "Renato Pires <renato696@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  }
 }
