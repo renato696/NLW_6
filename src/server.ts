@@ -19,7 +19,7 @@ const app = express();
 app.get("*/test", (request, response) => {
     // Request => Entrando
     // Response => Saindo
-    response.send("Olá NLW")
+    return response.send("Olá NLW")
 });
 
 // http://localhost:3000 - porta que vai estar o projeto
