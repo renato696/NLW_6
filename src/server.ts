@@ -16,7 +16,11 @@ const app = express();
  * PATCH => alterar uma informação específica, e.g. alterar somente a senha do usuario, o avatar do usuario.
  */
 
-app.get();
+app.get("*/test", (request, response) => {
+    // Request => Entrando
+    // Response => Saindo
+    response.send("Olá NLW")
+});
 
 // http://localhost:3000 - porta que vai estar o projeto
 app.listen(3000,() => console.log("Server is running at 3000"));
