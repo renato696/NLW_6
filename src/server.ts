@@ -16,6 +16,22 @@ const app = express();
  * PATCH => alterar uma informação específica, e.g. alterar somente a senha do usuario, o avatar do usuario.
  */
 
+/**
+ * o browser só consegue acessar requisições GET. Ele não consegue acessar requisições POST.
+ */
+/**
+ * Tipos de parametros que podemos utilizar em nossas requisições:
+ * 1- Routes Params => parametros que fazem parte da nossa rota, e.g. http://localhost:3000/produtos/1234...
+ * 
+ * 2- Query Params => parametros que fazem parte de uma query, buscar alguma coisa, e.g. http://localhost:3000/produtos?name=teclado&description=tecladobom.... a "?" marca a query, e o "&" o refinamento da busca. Query Params são parametros não obrigatórios. Eles não vem explicito na rota, como os Routes Params.
+ * 
+ * 3- Body Params => utilizados nos metodos POST, PUT, PATCH, eles veem no corpo da requisição. Não se utiliza Body Params para o metodo GET - está errado. Se eu quero inserir algo com a minha requisição, eu envio um objeto: 
+ * {
+ * "name": "teclado",
+ * "description": "teclado bom"
+ * }
+ */
+
 app.get("*/test", (request, response) => {
     // Request => Entrando
     // Response => Saindo
@@ -25,9 +41,6 @@ app.get("*/test", (request, response) => {
 app.post("*/test-post", (request, response) => {
     return response.send("Olá NLW método Post");
 });
-/**
- * o browser só consegue acessar requisições GET. Ele não consegue acessar requisições POST.
- */
 
 
 // http://localhost:3000 - porta que vai estar o projeto
