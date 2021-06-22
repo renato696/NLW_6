@@ -21,6 +21,12 @@ class User {
 
     @UpdateDateColumn()
     updated_at: Date;
+
+    constructor() {
+        if(!this.id) {
+            this.id = uuid();
+        }
+    }
 }
 
 export { User };
