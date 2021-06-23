@@ -28,6 +28,10 @@ class CreateUserService {
             email,
             admin
         });
+
+        await usersRepository.save(user);
+
+        return user;
     }
 
 }
