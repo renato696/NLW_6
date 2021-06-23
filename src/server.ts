@@ -1,6 +1,8 @@
 import "reflect-metadata";
 import express from "express";
 
+import { router } from "./routes";
+
 import "./database";
 
 // @types/express - bibliotecas de tipagem - devem ser instaladas com o comando "yarn add @types/express -D" desta forma os 3 pontinhos embaixo do from "expresse" desaparece e está tudo ok para continuar.
@@ -33,18 +35,17 @@ const app = express();
  * "name": "teclado",
  * "description": "teclado bom"
  * }
- */
-
-app.get("*/test", (request, response) => {
+app.get("./test", (request, response) => {
     // Request => Entrando
-    // Response => Saindo
+   // Response => Saindo
     return response.send("Olá NLW");
 });
-
-app.post("*/test-post", (request, response) => {
+app.post("./test-post", (request, response) => {
     return response.send("Olá NLW método Post");
 });
+*/
 
+app.use(router);
 
 // http://localhost:3000 - porta que vai estar o projeto
 app.listen(3000,() => console.log("Server is running at 3000"));
