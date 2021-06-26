@@ -1,5 +1,5 @@
 import { getCustomRepository } from "typeorm";
-import { tagsRepositories } from "../repositories/TagsRepositories";
+import { TagsRepositories } from "../repositories/TagsRepositories";
 
 
 class CreateTagService {
@@ -13,7 +13,7 @@ class CreateTagService {
 
         // select * from TAGS where name = "name"
         const tagAlreadyExists = await tagsRepositories.findOne({
-            name
+            name,
         });
 
         if(tagAlreadyExists) {
