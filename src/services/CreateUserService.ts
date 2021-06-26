@@ -30,7 +30,7 @@ class CreateUserService {
             name,
             email,
             admin,
-            password
+            password,
         });
 
         await usersRepository.save(user);
