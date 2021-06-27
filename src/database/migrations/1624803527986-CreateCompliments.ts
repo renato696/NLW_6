@@ -34,7 +34,7 @@ export class CreateCompliments1624803527986 implements MigrationInterface {
                         default: "now()"
                     }
                 ],
-                foreignKey: [
+                foreignKeys: [
                     {
                         name: "FKUserSenderCompliments",
                         referencedTableName: "users",
