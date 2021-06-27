@@ -16,6 +16,9 @@ class Compliment {
     @Column()
     tag_id: string;
 
+    @JoinColumn({name: "tag_id"})
+    tag: tag;
+
     @Column()
     message: string;
 
