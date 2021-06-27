@@ -16,13 +16,12 @@ export function ensureAuthenticated(request: Request, response: Response, next: 
 
     try {
         const decode = verify(token, "3f843693dbbfbaaed40b216f68f8a024");
-        console.log(decode);
+        return next();
     }catch(err) {
         return response.status(401).end();
     };
 
     // recuperar informações do usuário
-    
 
-return next();
+
 }
