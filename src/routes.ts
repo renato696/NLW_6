@@ -3,7 +3,7 @@ import { CreateUserController } from "./controllers/CreateUserControllers";
 import { CreateTagController } from "./controllers/CreateTagController";
 import { ensureAdmin } from "./middlewares/ensureAdmin";
 import { AuthenticateUserController } from "./controllers/AuthenticateUserController";
-import { CreateComplimentControler } from "./controllers/CreateComplimentController";
+import { CreateComplimentController } from "./controllers/CreateComplimentController";
 
 const router = Router();
 
