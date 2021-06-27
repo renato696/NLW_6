@@ -13,7 +13,7 @@ class CreateComplimentService {
 
     async execute ({tag_id, user_sender, user_receiver, message} : IComplimentRequest) {
         const complimentsRepositories = getCustomRepositoriy(ComplimentsRepositories);
-        const usersRepositories = getCustomRepositoriy(UsersRepositories);
+        const usersRepositories = getCustomRepository(UsersRepositories);
 
         if(user_sender === user_receiver) {
             throw new Error("Invalid - Same Sender and Receiver")
