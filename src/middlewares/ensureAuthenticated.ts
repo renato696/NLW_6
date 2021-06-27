@@ -4,10 +4,14 @@ export function ensureAuthenticated(request: Request, response: Response, next: 
     
     // receber o token
     const token = request.headers.authorization;
-    console.log(token);
+    
+    // validar se token está preenchido
+    if(!token) {
+        return response.status(401).end();
+    }
 
     return next();
-    // validar se token está preenchido
+
 
     // validar se token é valido
 
