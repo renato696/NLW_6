@@ -19,16 +19,14 @@ export function ensureAuthenticated(request: Request, response: Response, next: 
     const [,token] = authToken.split(" ");
 
     try {
+
         const { sub } = verify(token, "3f843693dbbfbaaed40b216f68f8a024") as IPayload;
-        
+
+        // recuperar informações do usuário        
         request.user_id = sub;
 
         return next();
     }catch(err) {
         return response.status(401).end();
     };
-
-    // recuperar informações do usuário
-
-
 }
