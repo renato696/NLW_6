@@ -10,7 +10,7 @@ const router = Router();
 const createUserController = new CreateUserController();
 const creatTagControler = new CreateTagController();
 const authenticateUserController = new AuthenticateUserController();
-const createComplimentController = new CreateComplimentControler();
+const createComplimentController = new CreateComplimentController();
 
 router.post("/tags", ensureAdmin, creatTagControler.handle);
 router.post("/users", createUserController.handle);
