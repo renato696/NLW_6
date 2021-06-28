@@ -3,7 +3,7 @@ import { ComplimentsRepositories } from "../repositories/ComplimentsRepositories
 
 
 
-class ListUserReceiveCompliments {
+class ListUserReceiveComplimentsService {
     
     async execute(user_id: string) {
         const complimentsRepositories = getCustomRepository(ComplimentsRepositories);
@@ -17,4 +17,4 @@ class ListUserReceiveCompliments {
     }
 }
 
-export { ListUserReceiveCompliments} ;
+export { ListUserReceiveComplimentsService } ;
