@@ -23,7 +23,7 @@ router.post("/users", createUserController.handle);
 router.post("/login", authenticateUserController.handle);
 router.post("/compliments", ensureAuthenticated, createComplimentController.handle);
 
-router.get("/users/compliments/send", listUserSendComplimentsController.handle);
-router.get("/users/compliments/receive", listUserReceiveComplimentsController.handle);
+router.get("/users/compliments/send", ensureAuthenticated ,listUserSendComplimentsController.handle);
+router.get("/users/compliments/receive", ensureAuthenticated ,listUserReceiveComplimentsController.handle);
 
 export { router };
